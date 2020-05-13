@@ -1,0 +1,71 @@
+.article.article-noheader .article-inner {
+	padding-top: 0;
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+}
+
+.results-retry-button, .results-review-buttons{
+	//margin: @button-margin-top 0 @button-margin-bottom;
+	button {
+		width: auto;
+        padding: 10px 22px 10px 22px;
+        line-height: 14px;
+        font-weight: bold;
+        font-size: @body-text-font-size;
+        color: @white;
+        background-color: lighten(@dark-green, 6%);
+        &:hover {
+            color: @white;
+            background-color: @blue;
+        }
+        &.disabled {
+            background-color: @button-color-disabled;
+        }
+	}
+    &.results-review-buttons {
+        overflow: auto;
+        button {
+            display: none;
+            @media screen and (max-width: @device-width-small) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.assessmentResults-certificate {
+    .assessmentResults-certificate-button {
+        margin-top: 10px;
+    }
+    .certificate-button-container  {
+        overflow: auto;
+    }
+    .button {
+        padding: 10px 22px 10px 22px;
+        line-height: 14px;
+        font-weight: bold;
+        font-size: @body-text-font-size;
+        color: @white;
+        background-color: lighten(@dark-green, 6%);
+        width: auto;
+        &:hover {
+            color: @white;
+            background-color: @blue;
+        }
+        &.disabled {
+            background-color: @button-color-disabled;
+        }
+    }
+}
+
+.assessmentResults-component.visibility-hidden {
+	display: none;
+}
+.assessmentResults-component {
+    .assessmentResults-body-inner {
+        .score {
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{{!-- Wrapped with div class="certificate-input-name" --}}
+<div class="certificate-input-name-outer-wrapper"
+     role="region" 
+     aria-label="{{popup}}"
+     tabindex="0">
+    <div class="certificate-input-name-inner">
+        <div class="bg-image">
+            <img src="assets/cerficate-input-interface.jpg">
+        </div>
+        <div class="certificate-input-name-wrapper">
+            <div class="body">		
+                <p>{{{a11y_text body}}}</p>
+            </div>
+            <div class="form">
+                {{!-- each input is then passed to the certificate, name is the id for the value --}}
+                <div class="field-name">
+                    <label for="name" id="name-label">{{{labelName}}}</label>
+                    <input type="text" class="text-box" 
+                           name="name" 
+                           aria-labelledby="name-label"/>
+                </div>
+                <div class="field-surname">
+                    <label for="surname" id="surname-label">{{{labelSurname}}}</label>
+                    <input type="text" class="text-box" 
+                           name="surname" 
+                           aria-labelledby="surname-label"/>
+                </div>
+                {{!-- <div class="field-userId">
+                    <label for="userId" id="userId-label">{{{labelUserId}}}</label>
+                    <input type="text" class="text-box" 
+                           name="userId" 
+                           aria-labelledby="userId-label"/>
+                </div> --}}
+            </div>
+            <div class="submit-btn-row">
+                <a href="#" class="button submit-btn clearfix" 
+                   role="button" 
+                   aria-label="{{ariaLabelButton}}"><span>{{{labelButton}}}</span></a>
+                <a href="#" class="button close-btn clearfix" 
+                   role="button" 
+                   aria-label="{{ariaLabelCloseButton}}"><span>{{{labelCloseButton}}}</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="certificate-shadow"></div>

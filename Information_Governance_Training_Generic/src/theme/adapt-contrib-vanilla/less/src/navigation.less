@@ -1,0 +1,75 @@
+// Navigation styling
+// ==================
+
+.navigation {
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    //box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    height: 63px;
+    max-width: @max-width;
+    overflow: hidden;
+    //background-color: alpha(@navigation-color, 50%);
+
+    background-color: rgba(255,255,255,.9);
+
+    .ie8 & {
+        max-width: @ie8-max-width;
+    }
+    .icon {
+        //.transition-color;
+        .no-touch &:hover:before {
+            color: @navigation-icon-color-hover;
+        }
+    }
+    .icon:before {
+        //padding: @navigation-padding;
+        padding: 0px 35px 0px 0px;
+        color: @blue;
+        font-size: 37px;
+        position: absolute;
+        top: 4px;
+        left: 1px;
+        font-family: Vanilla;
+        //.transition-color;
+
+        .no-touch &:hover {
+            //color: @navigation-icon-color-hover;
+        }
+        @media screen and (max-width: @device-width-small) {
+            font-size: 30px;
+            top: 7px;
+            left: 2px;
+        }
+    }
+    button {
+        position: relative;
+        font-size: @body-text-font-size;
+        font-family: @font-family;
+        color: @blue;
+        padding: 38px 40px 0px 0px;
+        //.transition-color;
+        .no-touch &:hover {
+            color: @navigation-icon-color-hover;
+        }
+        font-weight: bold;
+        @media screen and (max-width: @device-width-small) {
+            font-size: @body-text-font-size-small;
+            padding-right: 10px;
+        }
+    }
+    .navigation-logo {
+        position: absolute;
+        top: 10px;
+        left: 39px;
+
+        width: 140px;
+        height: 42px;
+
+        background-image: url("../../course/en/images/misc/logo.svg");
+    }
+    .page-level-progress-navigation {
+        display: none;
+    }
+}

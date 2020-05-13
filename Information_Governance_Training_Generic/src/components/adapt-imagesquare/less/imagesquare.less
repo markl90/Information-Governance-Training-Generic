@@ -1,0 +1,118 @@
+@imagesquare-item-spacing:13px;
+.imagesquare-component {
+    .imagesquare-item-inner {
+        float: left;
+        max-width: 46.8%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        .mxBdrRad(@compBorderRadius);
+        .dir-rtl & {
+            float: right;
+            margin-right: inherit;
+            margin-left: 10px;
+        }
+        @media all and (max-width:776px) {
+            max-width: 46.8%;
+        }
+        @media all and (max-width:760px) {
+            max-width: 100%;
+        }
+    }
+    .imagesquare-item-inner img {
+        width: 100%;
+        @media all and (max-width:776px) {
+            width: 100%;
+        }
+        @media all and (max-width:760px) {
+            width: 100%;
+        }
+    }
+    .imagesquare-item-inner:last-child {
+        margin-bottom: 0px !important;
+    }
+    .imagesquare-item {
+        float: left;
+        width: 66%;
+        .dir-rtl & {
+            float: right;
+        }
+    }
+    .imagesquare-item-title {
+        position: relative;
+
+        display: block;
+        float: left;
+
+        text-decoration: none;
+
+        color: @item-text-color;
+
+        &.visited {
+            color: @item-text-visited-color;
+        }
+
+        &.selected {
+            color: @item-text-visited-color;
+        }
+    }
+    .imagesquare-item-title-inner {
+        //padding: @item-padding;
+        background: @blue;
+    }
+    .image-inner-alignment {
+        float: left;
+    }
+
+    .imagesquare-item-image-inner-default {
+        display: block;
+    }
+    .imagesquare-item-image-inner-visited {
+        display: none;
+    }
+    .imagesquare-widget {
+        overflow: auto;
+    }
+    .imagesquare-popup {
+        display: none;
+        float: left;
+        width: 35%;
+
+        color: @inverted-foreground-color;
+        .dir-rtl & {
+            float: right;
+        }
+    }
+    .imagesquare-popup-inner {
+        padding: 20px;
+        .mxBdrRad(@compBorderRadius);
+        background: @yellow;
+        overflow: hidden;
+    }
+    &.mobile {
+        .imagesquare-popup {
+            display: none;
+        }
+    }
+    &.desktop {
+        .imagesquare-hidden-popup {
+            float: left;
+            width: 65%;
+            margin-right: 3%;
+        }
+    }
+    .imagesquare-hidden {
+        display: none;
+    }
+}
+.no-touch {
+    .imagesquare-component {
+        .imagesquare-item-title {
+            &:hover {
+                color: @white;
+            }
+            &.visited:hover {
+                color: @white;
+            }
+        }
+    }
+}

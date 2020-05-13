@@ -1,0 +1,29 @@
+<div class="results-inner component-inner">
+    {{> component this}}
+    <div class="results-widget component-widget">
+        {{#if _isRetryEnabled}}
+        <div class="results-retry component-feedback">
+            <div class="results-retry-inner component-feedback-inner">
+                {{{a11y_text retryFeedback}}}
+            </div>
+            {{!--
+            <div class="results-retry-button">
+                <button>{{#if _retry.button}}{{_retry.button}}{{else}}Retry{{/if}}</button>
+            </div>
+            --}}
+            <div class="results-review-buttons">
+                {{#each _globals._sections}}
+                    <button data-id="{{_id}}">{{{title}}}</button>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+        
+        <div class="assessmentResults-certificate component-feedback">
+            <div class="assessmentResults-certificate-button buttons">
+				<div class="certificate-button-container">
+                <button class="button certificate-button"{{#if _certificate.ariaButton}}aria-label="{{_certificate.ariaButton}}"{{/if}}>{{_certificate.button}}</button></div>
+            </div>
+        </div>
+    </div>
+</div>

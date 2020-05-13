@@ -1,0 +1,44 @@
+{{! Maintainers - Shubhendu Vaid}}
+{{#if topTitle}}<div class="component-title-outer"><b>{{{topTitle}}}</b></div>{{/if}}
+<div class="reveal-steps-inner component-inner">
+    {{> component this}}
+    <div class="reveal-steps-widget component-widget">
+        {{! Items }}
+        <div class="reveal-steps-item">
+            {{#each items}}
+                <div class="reveal-steps-item-inner item-{{@index}}" data-id="item-{{@index}}">
+                    <a href="#" class="reveal-steps-item-title {{#if _isVisited}}visited{{/if}} reveal-steps-anchor-{{@index}}" data-id="{{../_id}}-item-anchor-{{@index}}">
+                        <div class="reveal-steps-item-title-inner">
+                            <div>
+                            <h5 align="center">
+                                {{{text}}}
+                            </h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+        {{! Popups }}
+        <div class="reveal-steps-popup">
+            <div class="reveal-steps-popup-inner">
+                {{#each items}}
+                <div class="reveal-steps-popup-item index-{{@index}}">
+                    {{#if graphic.feedback_src}}
+                    <div class="reveal-steps-popup-item-image-inner-default">
+                        <img class="reveal-steps-image-inner-alignment" src="{{graphic.feedback_src}}" title="{{feedbacktitle}}" />
+                    </div>
+                    {{/if}}
+                    <div class="reveal-steps-popup-content">
+                        <div class="reveal-steps-popup-body">
+                            <div class="reveal-steps-content-body-inner">
+                                {{{feedbackbody}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.ie8 .section-heading-title {
+    margin-left: 250px;
+}
+.section-heading-title {
+    position: relative;
+    margin-left: 215px;
+    display: table;
+    height: 63px;
+    .navigation-line {
+        width: 1px;
+        height: 42px;
+        background: @grey;
+        margin-top: 11px;
+    }
+    .section-heading-title-inner {
+        display: none;
+        color: @title-color;
+        float: left;
+        padding: 16px 5px 10px 0px;
+        font-size: 17px;
+        //text-transform: uppercase;
+        //@media all and (width: 800px) and (height: 500px), all and (max-height: 630px), all and (max-width: 600px) {
+        //}
+        span {
+            font-weight: bold;
+        }
+    }
+    .section-heading-title-main {
+        display: table-cell;
+        vertical-align: middle;
+        color: @dark-green;
+        padding-left: 35px;
+        font-size: 26px;
+        //border-left: 1px solid @grey;
+    }
+    @media all and (width: 800px) and (height: 500px) {
+        
+    }
+    @media all and (max-width: (@device-width-small + 20px)) {
+        
+    }
+    @media all and (min-width: 760px) and (max-width:770px) {
+        
+    }
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}

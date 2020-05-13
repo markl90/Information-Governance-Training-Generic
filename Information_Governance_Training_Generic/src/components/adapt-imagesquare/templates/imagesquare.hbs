@@ -1,0 +1,79 @@
+{{! Maintainers - Shubhendu Vaid}}
+{{#if topTitle}}<div class="component-title-outer"><b>{{{topTitle}}}</b></div>{{/if}}
+<div class="imagesquare-inner component-inner">
+    {{#if _isInlineBody}}
+        {{#if displayTitle}}
+        <div class="{{_component}}-title component-title">
+            <div role="heading" tabindex="0" class="{{_component}}-title-inner component-title-inner"  aria-level="4">
+                {{{displayTitle}}}
+            </div>
+        </div>
+        {{/if}}
+    {{else}} 
+        {{> component this}}
+    {{/if}}
+
+    <div class="imagesquare-widget component-widget">
+        {{! Items }}
+        <div class="imagesquare-item">
+            {{#if _isInlineBody}}
+                {{#if body}}
+                <div class="{{_component}}-body component-body">
+                    <div class="{{_component}}-body-inner component-body-inner">
+                        {{{a11y_text body}}}
+                    </div>
+                </div>
+                {{/if}}
+                
+                {{#if instruction}}
+                <div class="{{_component}}-instruction component-instruction">
+                    <div class="{{_component}}-instruction-inner component-instruction-inner">
+                        {{{a11y_text instruction}}}
+                    </div>
+                    <div class="{{_component}}-instruction-inner component-instruction-inner">
+                          {{{a11y_text instructionFinal}}}
+                      </div>
+                </div>
+                {{/if}}
+            {{/if}}
+
+            {{#each items}}
+                <div class="imagesquare-item-inner item-{{@index}}" data-id="item-{{@index}}">
+                    <a href="#" class="imagesquare-item-title {{#if _isVisited}}visited{{/if}} imagesquare-anchor-{{@index}}" data-id="{{../_id}}-item-anchor-{{@index}}">
+                        <div class="imagesquare-item-title-image">
+                            <img src="{{graphic.feedback_src}}">
+                        </div>
+                        <div class="imagesquare-item-title-inner">
+                            <div>
+                            <h5 align="center">
+                                {{{text}}}
+                            </h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+        {{! Popups }}
+        <div class="imagesquare-popup">
+            <div class="imagesquare-popup-inner">
+                {{#each items}}
+                <div class="imagesquare-popup-item index-{{@index}}">
+                    {{#if graphic.feedback_src}}
+                    <div class="imagesquare-popup-item-image-inner-default">
+                        <img class="imagesquare-image-inner-alignment" src="{{graphic.feedback_src}}" title="{{feedbacktitle}}" />
+                    </div>
+                    {{/if}}
+                    <div class="imagesquare-popup-content">
+                        <div class="imagesquare-popup-body">
+                            <div class="imagesquare-content-body-inner">
+                                {{{feedbackbody}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

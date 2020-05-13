@@ -1,0 +1,10 @@
+{
+    "name": "adapt-branching-record-keeping",
+    "version": "0.0.1",
+    "displayName" : "Branching Record Keeping",
+    "main": "/js/adapt-branching-record-keeping.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-extension"
+    ]
+}

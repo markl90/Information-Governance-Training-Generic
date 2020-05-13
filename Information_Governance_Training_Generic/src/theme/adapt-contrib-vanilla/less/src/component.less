@@ -1,0 +1,69 @@
+// Component styling
+// =================
+
+.component {
+    .component-inner {
+        .component-background;
+        &.blank-inner {
+            padding: 0;
+            // don't apply styling to blank component
+
+            background-color: transparent;
+        }
+    }
+
+    .component-title {
+        margin-bottom: @component-title-margin-bottom;
+
+        text-align: left;
+
+        font-size: 31px;
+        color: @blue;
+
+        .dir-rtl & {
+            text-align: right;
+        }
+    }
+
+    .component-title-inner {
+        padding: 0;
+        margin-top: -6px;
+    }
+
+    .component-body {
+        margin: @component-body-margin-top 0 @component-body-margin-bottom;
+
+        a {
+            text-decoration: underline;
+
+            color: @purple;
+        }
+    }
+
+    .component-body-inner {
+        padding: 0;
+    }
+
+    .component-instruction {
+        margin-bottom: @component-instruction-margin-bottom;
+
+        .instruction-text;
+    }
+
+    .component-instruction-inner {
+        &.validation-error {
+            color: @red;
+        }
+    }
+
+    // to replicate padding between blocks when components drop into a single column
+    @media all and (max-width: (@device-width-small)) {
+        &.component-left {
+            //padding: 0 0 (@block-padding / 3);
+        }
+
+        &.component-right {
+            //padding: (@block-padding / 3) 0 0;
+        }
+    }
+}

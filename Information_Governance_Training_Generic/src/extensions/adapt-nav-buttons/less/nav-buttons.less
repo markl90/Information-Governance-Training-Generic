@@ -1,0 +1,218 @@
+.nav-buttons-container {
+    position: relative;
+    z-index: 99;
+    width: @max-width;
+}
+
+.nav-buttons {
+    .nav-buttons-disabled {
+        cursor: default;
+        color: rgba(255, 255, 255, 50%);
+        &.nav-buttons-item {
+            &.nav-buttons-item-0 {
+                .label,
+                .label:before {
+                    color: rgba(255, 255, 255, 50%);
+                }
+                &:hover {
+                    background-color:@blue;
+                    .label {
+                        color: rgba(255, 255, 255, 50%);
+                        ;
+                    }
+                    .label:before {
+                        color: rgba(255, 255, 255, 50%);
+                        ;
+                    }
+                }
+            }
+            &.nav-buttons-item-1 {
+                .label,
+                .label:before {
+                    color: rgba(255, 255, 255, 50%);
+                }
+                &:hover {
+                    background-color: @blue;
+                    .label {
+                        color: rgba(255, 255, 255, 50%);
+                        ;
+                    }
+                    .label:before {
+                        color: rgba(255, 255, 255, 50%);
+                        ;
+                    }
+                }
+            }
+            .label {
+                color: rgba(255, 255, 255, 50%);
+            }
+        }
+    }
+}
+
+.nav-buttons-active {
+    cursor: auto;
+}
+
+.nav-buttons {
+    position: fixed;
+    //These are for center align
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    max-width: @max-width;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    background-color: @dark-green;
+    .nav-buttons-item {
+        display: block;
+        text-decoration: none;
+        -o-transition: color .1s ease-out, background .2s ease-in;
+        -ms-transition: color .1s ease-out, background .2s ease-in;
+        -moz-transition: color .1s ease-out, background .2s ease-in;
+        -webkit-transition: color .1s ease-out, background .2s ease-in;
+        transition: color .1s ease-out, background .2s ease-in;
+        &.nav-buttons-item-0 {
+            position: absolute;
+            //margin-top: 7px;
+            margin-left: -117px;
+            min-width: 77px;
+            left: 50%;
+            padding: 15px 20px 13px 20px;
+            background-color: lighten(@dark-green, 6%);
+            @media all and (max-width: (@device-width-small)) {
+                margin-left: -100px;
+                min-width: 70px;
+                padding: 16px 15px 14px 15px;
+            }
+            .label {
+                font-size: 18px;
+                font-weight: bold;
+                color: @white;
+                text-align: center;
+                @media all and (max-width: (@device-width-small)) {
+                    font-size: 16px;
+                }
+                
+            }
+            /*.label:before {
+                content: "\e650";
+                position: relative;
+                float: right;
+                font-family: Vanilla;
+                font-size: 30px;
+                font-weight: bold;
+                color: @white;
+            }*/
+            &:hover {
+                background-color: @blue;
+                .label {
+                    color: @white;
+                }
+                /*.label:before {
+                    color: @white;
+                }*/
+            }
+        }
+        &.nav-buttons-item-1 {
+            position: absolute;
+            //margin-top: 7px;
+            margin-right: 117px;
+            min-width: 77px;
+            left: 50%;
+            padding: 15px 20px 13px 20px;
+            background-color: lighten(@dark-green, 6%);
+            @media all and (max-width: (@device-width-small)) {
+                margin-right: 110px;
+                min-width: 70px;
+                padding: 16px 15px 14px 15px;
+            }
+            .label {
+                font-size: 18px;
+                font-weight: bold;
+                color: @white;
+                text-align: center;
+                @media all and (max-width: (@device-width-small)) {
+                    font-size: 16px;
+                }
+                
+            }
+            /*
+            .label:before {
+                content: "\e64f";
+                position: relative;
+                float: right;
+                font-family: Vanilla;
+                font-size: 30px;
+                font-weight: bold;
+                color: @white;
+            }
+            */
+            &:hover {
+                background-color: @blue;
+                .label {
+                    color: @white;
+                }
+                /*.label:before {
+                    color: @white;
+                }*/
+            }
+        }
+        &.nav-buttons-item-2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 16px 20px 14px 20px;
+            color: @white;
+            background-color: lighten(@dark-green, 6%);
+            .label {
+                font-size: 15px;
+                font-weight: bold;
+                color: @white;
+                .labelText {
+                    @media all and (max-width: (@device-width-small)) {
+                        display: none;
+                    }
+                }
+            }
+            .label:before {
+                content: "\e638";
+                position: relative;
+                float: left;
+                font-family: Vanilla;
+                font-size: 23px;
+                margin-right: 10px;
+                color: @white;
+                @media all and (max-width: (@device-width-small)) {
+                    margin-right: 0;
+                }
+            }
+            &:hover {
+                background-color: @blue;
+                .label {
+                    color: @white;
+                }
+                .label:before {
+                    color: @white;
+                }
+            }
+        }
+    }
+    //not used when accessibility is toggled ON
+    .accessibility & {
+        display: none;
+    }
+    .page-level-progress-nav-buttons {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.nav-buttons-container-inner {
+    padding-right: @block-padding-right;
+    padding-left: @block-padding-left;
+}

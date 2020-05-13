@@ -1,0 +1,82 @@
+{
+        "_id":"c-121",
+        "_parentId":"b-61",
+        "_type":"component",
+        "_component":"imagesquare",
+        "_classes":"",
+        "_layout":"full",
+		"title":"",
+		"body":"<br>The Image Squares component displays a number of square boxes. These may be numbered or shown as a greyed-out image. When a square is selected, it reveals a colour image. Once revealed, the images in the squares stay on the screen. When each square is selected, explanatory text is displayed on the other side of the screen. This remains until another square is selected and a different text replaces it.",
+		"componentDesktopWidth":"60%",
+		"componentSmartphoneWidth":"100%",
+		"feedbackwidth":"35%",
+		"boxMargin":"5",
+		"items": [
+			{
+				"text": "ImageSquare 1",
+				"feedbacktitle": "Image Square 1",
+				"feedbackbody": "Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback. Image Square Component 1 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 1",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img1_normal.jpg",
+                    "src1": "course/en/images/image-square/img1_visited.jpg"
+                }
+			},
+			{
+				"text": "ImageSquare 2",
+				"feedbacktitle": "Image Square 2",
+				"feedbackbody": "Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback. Image Square Component 2 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 2",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img2_normal.jpg",
+                    "src1": "course/en/images/image-square/img2_visited.jpg"
+                }
+			},
+			{
+				"text": "ImageSquare 3",
+				"feedbacktitle": "Image Square 3",
+				"feedbackbody": "Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback. Image Square Component 3 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 3",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img3_normal.jpg",
+                    "src1": "course/en/images/image-square/img3_visited.jpg"
+                }
+			},
+			{
+				"text": "ImageSquare 4",
+				"feedbacktitle": "Image Square 4",
+				"feedbackbody": "Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback. Image Square Component 4 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 4",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img4_normal.jpg",
+                    "src1": "course/en/images/image-square/img4_visited.jpg"
+                }
+			},
+			{
+				"text": "ImageSquare 5",
+				"feedbacktitle": "Image Square 5",
+				"feedbackbody": "Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback. Image Square Component 5 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 5",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img5_normal.jpg",
+                    "src1": "course/en/images/image-square/img5_visited.jpg"
+                }
+			},
+			{
+				"text": "ImageSquare 6",
+				"feedbacktitle": "Image Square 6",
+				"feedbackbody": "Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback. Image Square Component 6 feedback.",
+				"graphic": {
+                    "alt": "Alt text for option 6",
+                    "title": "title text",
+                    "src": "course/en/images/image-square/img6_normal.jpg",
+                    "src1": "course/en/images/image-square/img6_visited.jpg"
+                }
+			}
+		]
+    }

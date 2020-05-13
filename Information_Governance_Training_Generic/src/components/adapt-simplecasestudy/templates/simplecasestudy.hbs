@@ -1,0 +1,108 @@
+{{! Maintainers - Shubhendu Vaid}}
+{{#if topTitle}}<div class="component-title-outer"><b>{{{topTitle}}}</b></div>{{/if}}
+<div class="simplecasestudy-inner component-inner">
+    {{#if _isInlineBody}}
+        {{#if displayTitle}}
+        <div class="{{_component}}-title component-title">
+            <div role="heading" tabindex="0" class="{{_component}}-title-inner component-title-inner"  aria-level="4">
+                {{{displayTitle}}}
+            </div>
+        </div>
+        {{/if}}
+    {{else}} 
+        {{> component this}}
+    {{/if}}
+    <div class="simplecasestudy-widget component-widget">
+        <div class="simplecasestudy-item">
+            {{#if _isInlineBody}}
+                {{#if body}}
+                <div class="{{_component}}-body component-body">
+                    <div class="{{_component}}-body-inner component-body-inner">
+                        {{{a11y_text body}}}
+                    </div>
+                </div>
+                {{/if}}
+                
+                {{#if instruction}}
+                <div class="{{_component}}-instruction component-instruction">
+                    <div class="{{_component}}-instruction-inner component-instruction-inner">
+                        {{{a11y_text instruction}}}
+                    </div>
+                    <div class="{{_component}}-instruction-inner component-instruction-inner">
+                          {{{a11y_text instructionFinal}}}
+                      </div>
+                </div>
+                {{/if}}
+            {{/if}}
+            
+            {{#each items}}
+            {{#if graphic.src}}
+            <div class="simplecasestudy-item-inner item-{{@index}}" data-id="item-{{@index}}">
+                <a href="#" class="simplecasestudy-item-title {{#if _isVisited}}visited{{/if}} simplecasestudy-anchor-{{@index}}" data-id="{{../_id}}-item-anchor-{{@index}}">
+                    <div class="simplecasestudy-item-title-inner">
+                        <h5 align="center">
+                            {{{text}}}
+                        </h5>
+                    </div>
+                    <div class="simplecasestudy-item-image-inner-default">
+                        <img class="image-inner-alignment" src="{{graphic.src}}" alt="" title="" />
+                    </div>
+                    <div class="simplecasestudy-item-image-inner-visited">
+                        <img class="image-inner-alignment" src="{{graphic.src1}}" alt="" title="" />
+                    </div>
+                </a>
+            </div>
+            {{/if}}
+            {{#if graphic.backgroundColor}}
+            <div class="simplecasestudy-item-inner item-{{@index}} simplecasestudy-color-case-parent" data-id="item-{{@index}}">
+                <a href="#" class="simplecasestudy-item-title {{#if _isVisited}}visited{{/if}} simplecasestudy-color-case simplecasestudy-anchor-{{@index}}" data-id="{{../_id}}-item-anchor-{{@index}}" style="background-color:{{{graphic.backgroundColor}}};">
+                    <div class="simplecasestudy-item-title-image">
+                        <img src="{{graphic.feedback_src}}">
+                    </div>
+                    <div class="simplecasestudy-item-title-inner">
+                        <div>
+                            <h5 align="center">
+                                {{{text}}}
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+
+        <div class="simplecasestudy-popup">
+            <div class="simplecasestudy-popup-inner">
+                {{#each items}}
+                <div class="simplecasestudy-popup-item index-{{@index}}">
+                    {{#if graphic.feedback_src}}
+                    <div class="simplecasestudy-popup-item-image-inner-default">
+                        <img class="simplecasestudy-image-inner-alignment" src="{{graphic.feedback_src}}" />
+                    </div>
+                    {{/if}}
+
+                    <div class="simplecasestudy-popup-content">
+                        {{#if feedbacktitle}}
+                            <div class="simplecasestudy-popup-title">
+                                <h5 class="simplecasestudy-popup-title-inner">
+                                    {{{feedbacktitle}}}
+                                </h5>
+                            </div>
+                        {{/if}}
+                        <div class="simplecasestudy-popup-body">
+                            <div class="simplecasestudy-content-body-inner">
+                                {{{feedbackbody}}}
+                            </div>
+                            <div class="simplecasestudy-content-notify">
+                                <!--<img class="image-inner-alignment" src="" alt="" title="" />-->
+                                <button data-id="{{../_id}}-notify-{{@index}}" class="simplecasestudy-image-button-inner-alignment"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "adapt-animation-hotspot",
+  "homepage": "https://github.com/kunjsharma/adapt-animation-hotspot",
+  "authors": [
+    "Kunj B Sharma <kunjsharma@hotmail.com>"
+  ],
+  "description": "This is a presentation component having images that show one by one when it appears in view and hotspots over it. When a learner clicks on a hot spot within the image, a pop-up is displayed.",
+  "main": "/js/adapt-animation-hotspot.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component",
+    "adapt-animation-hotspot"
+  ],
+  "license": "GPLv3",
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3c933a5f-3234-4c5c-af4e-72a864683486"
+  },
+  "_source": "git://github.com/kunjsharma/adapt-animation-hotspot.git",
+  "_target": "*",
+  "_originalSource": "adapt-animation-hotspot",
+  "_direct": true
+}

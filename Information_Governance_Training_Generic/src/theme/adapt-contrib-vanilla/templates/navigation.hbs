@@ -1,0 +1,11 @@
+{{! Maintainers - Daryl Hedley}}
+{{! All links in the nav bar should have an attritbue of data-event, navigationView uses this to fire a global event}}
+<div class="navigation-inner clearfix" role="navigation" aria-label="{{_globals._accessibility._ariaLabels.navigation}}">
+    {{!-- <div class="navigation-logo"></div> --}}
+    <button class="base navigation-drawer-toggle-button icon icon-menu" data-event="homeButton" aria-label="{{_globals._accessibility._ariaLabels.navigationDrawer}}">Menu</button>
+    <div class="section-heading-title">
+    	{{!-- <div class="navigation-line"></div> --}}
+    	<div class="section-heading-title-main">{{_globals._stickyHeader.title}}</div>
+        <div class="section-heading-title-inner ellipsis"></div>
+    </div>
+</div>

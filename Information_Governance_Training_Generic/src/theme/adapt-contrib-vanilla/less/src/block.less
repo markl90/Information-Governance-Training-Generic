@@ -1,0 +1,38 @@
+// Block styling
+// =============
+
+.block {
+    background-color: @background-color;
+
+    .block-inner {
+        max-width: @device-width-large;
+        margin: auto;
+        padding: @block-padding-top 0 @block-padding-bottom;
+        // reduce padding as screen width decreases
+        @media all and (max-width: (@device-width-medium)) {
+            padding: (@block-padding-top / 1.8) 20px (@block-padding-bottom / 2);
+        }
+        @media all and (max-width: (@device-width-small)) {
+            padding: (@block-padding-top / 1.8) 10px @block-padding-bottom;
+        }
+    }
+
+    .block-title {
+        margin-bottom: @block-title-margin-bottom;
+        color: @title-color;
+        text-align: left;
+
+        .dir-rtl & {
+            text-align: right;
+        }
+    }
+
+    .block-body{
+        margin-bottom: @block-body-margin-bottom;
+    }
+
+    .block-instruction {
+        margin-bottom: @block-instruction-margin-bottom;
+        .instruction-text;
+    }
+}

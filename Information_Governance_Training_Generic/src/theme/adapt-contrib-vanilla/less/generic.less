@@ -1,0 +1,33 @@
+// THIS IS WHERE WE CAN DECLARE ANY OTHER VARIABLES (ie. device-width, border-width etc.)
+
+// Device widths
+// =============
+
+@device-width-small: 520px;
+@device-width-medium: 768px;
+@device-width-large: 1286px;
+
+// Max-widths
+// ==========
+
+@max-width: 1366px;
+@ie8-max-width: 1024px;
+
+// Borders and Outlines
+// ====================
+
+@focus-outline: 3px solid orange; //focus outline is displayed when accessibility is enabled
+
+@button-border: 0px solid @button-border-color;
+
+@item-border: 3px solid @item-border-color;
+
+//QA1397
+
+@fbBorderRadius: 10px;
+@compBorderRadius: 4px;
+.mxBdrRad(@radius: 4px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}

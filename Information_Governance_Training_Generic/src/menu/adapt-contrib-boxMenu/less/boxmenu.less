@@ -1,0 +1,248 @@
+.menu {
+    background: @background-color;
+
+    .menu-container {
+        width: 100%;
+        max-width: @max-width;
+        overflow: hidden;
+
+        .menu-container-inner {
+            margin-top: 64px;
+            padding: 0;
+            background-image: url("../../course/en/images/module/01_01_005_bg.jpg");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100% auto;
+            min-height: 920px;
+          
+            .menu-wrapper {
+                float: left;
+                background-color:@white;
+                border-radius: @fbBorderRadius;
+                width: 94%;
+                margin: 40px 0px 0px 3%;
+                
+                .menu-header-inner {
+                    text-align: center;
+        
+                    .menu-title {
+                        margin: 2.2% 0 0 0;
+                        font-size: 38px;
+                        color: lighten(@dark-green, 10%);
+                    }
+
+                    .menu-body {
+                        width: 69%;
+                        margin: 1.5% auto;
+                    }
+                }
+
+                .menu-items {
+                    float: left;
+                    width: 100%;
+                   
+                    .menu-item {
+                        cursor: pointer;
+                        float: left;
+                        width: 30.763%;
+                        margin: 0 auto 1.5% 2%;
+                        overflow: hidden;
+                        position: relative;
+
+                        .menu-item-inner {
+                            position: relative;
+                            width: 100%;
+                            margin: auto;
+                            color: @white;
+
+                            .menu-item-graphic {
+                                top: 0;
+                                left: 0;
+                                img {
+                                    .mxBdrRad(@compBorderRadius);
+                                }
+                            }
+
+                            .menu-item-title {
+                                position: absolute;
+                                bottom: 3px;
+                                left: 0;
+                                width: 100%;
+                                padding: 0;
+                                font-size: 100%;
+                                text-align: left;
+
+                                .menu-item-title-base {
+                                    position: absolute;
+                                    width: 100%;
+                                    bottom: 0px;
+
+                                    .menu-item-title-left-base {
+                                        float: left;
+                                        width: 12.15%;
+                                        height: 100%;
+                                        border-bottom-left-radius: @compBorderRadius;
+                                    }
+
+                                    .menu-item-title-left-base-normal {
+                                        background-color: lighten(@dark-green, 10%);
+                                    }
+
+                                    .menu-item-title-left-base-over {
+                                        background-color: darken(@yellow, 10%);
+                                    }
+
+                                    .menu-item-title-right-base {
+                                        float: right;
+                                        width: 87.85%;
+                                        height: 100%;
+                                        background-color: fade(@blue, 90%);
+                                        border-bottom-right-radius: @compBorderRadius;
+                                    }
+
+                                    .menu-item-title-right-base-normal {
+                                        background-color: fade(@blue, 90%);
+                                    }
+                                
+                                    .menu-item-title-right-base-over  {
+                                        background-color: fade(@yellow, 90%);
+                                    }
+                                }
+
+                                .menu-item-title-inner {
+                                    position: absolute;
+                                    top: 0px;
+                                    z-index: 1;
+                                    width: 100%;
+                                    font-size: 17px;
+                                    line-height: 120%;
+
+                                    .menu-item-counter {
+                                        display: inline-block;
+                                        float: left;
+                                        width: 11.5%;
+                                        /* padding: 0 0; */
+                                        text-align: center;
+                                        font-size: 26px;
+                                        padding-top: 2.5%;
+                                    }
+
+                                    .menu-item-desc {
+                                        display: inline-block;
+                                        width: 83.5%;
+                                        float: right;
+                                        padding-top: 2.5%;
+                                        /* right: 0; */
+                                    }
+                                }
+                            }
+
+                            .page-level-progress-menu-item {
+                                display: none;
+                                position: absolute;
+                                right: 15px;
+                                bottom: 15px;
+                        
+                                float: none;
+                                width: 60px;
+                                height: 6px;
+                                padding: 0;
+                        
+                                .dir-rtl & {
+                                    right: auto;
+                                    left: (@menu-block-padding-left+4);
+                                }
+
+                                .page-level-progress-menu-item-indicator {
+                                    width: 60px;
+                                    height: 6px;
+                                    border: 1px solid @white;
+                                    border-color: rgba(256,256,256,.8);
+                                    border-radius: 25px;
+    
+                                    .page-level-progress-menu-item-indicator-bar {
+                                        height: 6px;
+                                
+                                        border-radius: 25px;
+                                        background-color: rgba(256,256,256,.8);
+                                    }
+                                }
+                            
+                            }
+                        }
+                        &.completed:after {
+                            position: absolute;
+                            bottom: 14px;
+                            right: 9px;
+                            font-size: 18px;
+                            font-weight: @font-weight-light;
+                            color: @white;
+                            content: "\e633";
+                            font-family: vanilla;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: (@device-width-small + 1)) and (max-width: @device-width-medium) { 
+    .menu {
+        .menu-container {
+            .menu-container-inner {
+                background-repeat:repeat-y;
+                padding-bottom: 10px;
+
+                .menu-wrapper {
+                    width: 96%;
+                    margin: 10px 0px 0px 2%;
+
+                    .menu-header-inner {
+                        .menu-body {
+                            width: 95%;
+                        }
+                    }
+
+                    .menu-items {
+                        .menu-item {
+                            width: 47.2%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: (@device-width-small)) { 
+    .menu {
+        .menu-container {
+            .menu-container-inner {
+                background-repeat:repeat-y;
+                padding-bottom: 10px;
+
+                .menu-wrapper {
+                    width: 96%;
+                    margin: 10px 0px 0px 2%;
+                    
+                    .menu-header-inner {
+                        .menu-body {
+                            width: 95%;
+                        }
+                        .menu-title {
+                            font-size: 26px;
+                        }
+                    }
+
+                    .menu-items {
+                        .menu-item {
+                            width: 95.956%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+//config.json when not need to translate
+//course.json when needs to be translated
+"_certificate": {
+        "_isEnabled": true,
+        "_openCertificateOnComplete": false,
+        "popup": "Certificate popup.",
+        "headingText": "Certificate of Completion",
+        "boxText": "This certificate is presented in recognition of",
+        "boxTextContinued": "for having successfully completed",
+        "courseTitle": "Anti-Money Laundering and Counter Terrorist Financing",
+        "_courseTitle_type": {
+            "standalone": "Standalone version",
+            "online": "e-learning"
+        },
+        "courseTitle_lang": " (Thai)",
+        "labelUserId": "Staff ID: ",
+        "labelScore": "with a score of ",
+        "extraText": "Sponsored by Standard Chartered Financial Crime Compliance Academy",
+        "dateFormat": " ^o^n d F Y",
+        "_dateFormat_comment": "Following letters needs to be escaped with ^ character: dDjlNSwzWFmMntLoYyaABgGhHisueTIOPZcrU",
+        "_dateFormatOptions": {
+            "monthNames": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            "monthNamesAbbr": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "dayNames": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "dayNamesAbbr": [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thur",
+                "Fri",
+                "Sat"
+            ]
+        },
+        "labelPrintButton": "Print Certificate",
+        "ariaLabelPrintButton": "Print the certificate by clicking here.",
+        "labelCloseButton": "Close",
+        "ariaLabelCloseButton": "Close the certificate popup by clicking here.",
+        "_input": {
+            "popup": "Certificate, input user details popup.",
+            "body": "Please enter following details required to display the certificate.",
+            "labelName": "First name:",
+            "labelSurname": "Last name:",
+            "labelUserId": "Staff ID:",
+            "labelButton": "Confirm",
+            "ariaLabelButton": "Submit your details by clicking here.",
+            "labelCloseButton": "Close",
+            "ariaLabelCloseButton": "Close the input user details popup by clicking here."
+        }
+    }

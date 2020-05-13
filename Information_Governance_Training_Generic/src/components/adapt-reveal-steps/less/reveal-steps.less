@@ -1,0 +1,118 @@
+@reveal-steps-item-spacing:13px;
+.reveal-steps-component {
+    .reveal-steps-item-inner {
+        float: left;
+        max-width: 46.8%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        .mxBdrRad(@compBorderRadius);
+        .dir-rtl & {
+            float: right;
+            margin-right: inherit;
+            margin-left: 10px;
+        }
+        @media all and (max-width:776px) {
+            max-width: 46.8%;
+        }
+        @media all and (max-width:760px) {
+            max-width: 100%;
+        }
+    }
+    .reveal-steps-item-inner img {
+        width: 100%;
+        @media all and (max-width:776px) {
+            width: 100%;
+        }
+        @media all and (max-width:760px) {
+            width: 100%;
+        }
+    }
+    .reveal-steps-item-inner:last-child {
+        margin-bottom: 0px !important;
+    }
+    .reveal-steps-item {
+        float: left;
+        width: 66%;
+        .dir-rtl & {
+            float: right;
+        }
+    }
+    .reveal-steps-item-title {
+        position: relative;
+
+        display: block;
+        float: left;
+
+        text-decoration: none;
+
+        color: @item-text-color;
+
+        &.visited {
+            color: @item-text-visited-color;
+        }
+
+        &.selected {
+            color: @item-text-visited-color;
+        }
+    }
+    .reveal-steps-item-title-inner {
+        //padding: @item-padding;
+        background: @blue;
+    }
+    .image-inner-alignment {
+        float: left;
+    }
+
+    .reveal-steps-item-image-inner-default {
+        display: block;
+    }
+    .reveal-steps-item-image-inner-visited {
+        display: none;
+    }
+    .reveal-steps-widget {
+        overflow: auto;
+    }
+    .reveal-steps-popup {
+        display: none;
+        float: left;
+        width: 35%;
+
+        color: @inverted-foreground-color;
+        .dir-rtl & {
+            float: right;
+        }
+    }
+    .reveal-steps-popup-inner {
+        padding: 20px;
+        .mxBdrRad(@compBorderRadius);
+        background: @yellow;
+        overflow: hidden;
+    }
+    &.mobile {
+        .reveal-steps-popup {
+            display: none;
+        }
+    }
+    &.desktop {
+        .reveal-steps-hidden-popup {
+            float: left;
+            width: 65%;
+            margin-right: 3%;
+        }
+    }
+    .reveal-steps-hidden {
+        display: none;
+    }
+}
+.no-touch {
+    .reveal-steps-component {
+        .reveal-steps-item-title {
+            &:hover {
+                color: @white;
+            }
+            &.visited:hover {
+                color: @white;
+            }
+        }
+    }
+}

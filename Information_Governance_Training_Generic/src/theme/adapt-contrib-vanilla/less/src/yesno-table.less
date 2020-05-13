@@ -1,0 +1,92 @@
+.yesno-table-component {
+    .yesno-table-inner {
+        /*padding: 20px;*/
+        /*padding:20px 40px 20px 50px;
+        padding: 4% 8% 4% 10%;
+        
+        background-color: @blue;*/
+
+        .mxBdrRad(@fbBorderRadius);
+        .buttons {
+            margin-top: 8px;
+        }
+
+        .buttons-inner {
+            .buttons-feedback {
+                display: none;
+            }
+
+            .button,
+            button {
+                float: right;
+                width: auto;
+                padding: 10px 22px 10px 22px;
+                line-height: 14px;
+                font-weight: bold;
+                font-size: @body-text-font-size;
+                color: @white;
+                background-color: lighten(@dark-green, 6%);
+                &:hover {
+                    color: @white;
+                    background-color: @blue;
+                }
+                &.disabled {
+                    background-color: @button-color-disabled;
+                }
+            }
+        }
+    }
+
+    
+    &.component-full {
+        .yesno-table-inner {
+            @media screen and (min-width: (@device-width-medium + 1px)) {
+                padding: 4% 4% 4% 6%;
+            }
+        }
+    }
+
+    .yesno-table-header {
+        .component-title {
+            margin-bottom: 11px;
+            line-height: 116%;
+            //.title;
+        }
+        .yesno-table-title {
+            //padding-bottom: 45px;
+                       
+
+            .yesno-table-title-inner {
+                //float: left;
+                //width: 83.5%;
+                //padding-top: 5px;
+                //font-size: 17px;
+            }
+        }
+
+        .yesno-table-instruction {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            //font-size: 16px;
+
+            font-weight: normal;
+        }
+
+        .component-instruction-inner.validation-error {
+            color: @red;
+        }
+    }
+
+    .yesno-table-widget {
+        .yesno-table-table_border {
+            //border: 1px solid @white;
+            //.mxBdrRad;
+        }
+        .yesno-table-table { 
+            .yesno-table-radio-label {
+                color: @white;
+                background: @blue;
+            }
+        }
+    }
+}

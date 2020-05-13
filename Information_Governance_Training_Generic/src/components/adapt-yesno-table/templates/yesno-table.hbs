@@ -1,0 +1,76 @@
+{{!-- Maintainers - Shubhendu Vaid, Łukasz 'Severiaan' Grela --}}
+<div class="yesno-table-inner component-inner"
+     role="region"
+     aria-label="{{_globals._components._yesnoTable.ariaRegion}}"
+     {{#if _globals._components._yesnoTable.ariaRegion}} tabindex="0" {{/if}}>
+    {{> component this}}
+    <div class="accessibility-answer">
+        <span tabindex="-1" role="region" class="aria-label prevent-default" id="aria-labels-accessibility-answer"></span>
+    </div>
+    <div class="yesno-table-widget component-widget {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}{{#unless _showDontKnow}} two-column-table{{/unless}}">
+        <div class="yesno-table-table_border">
+        <div class="yesno-table-table">
+            <div role="row"
+                 class="yesno-table-row yesno-table-row-title">
+                <div class="yesno-table-cell yesno-table-column-text">&nbsp;</div>
+                <div class="yesno-table-cell yesno-table-column-result">&nbsp;</div>
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-title" role="columnheader">
+                    <span class="yesno-table-radio-label yesno-table-radio-label-yes">{{_columnLabels.col0}}</span>
+                </div>
+                {{#if _showDontKnow}}
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-title" role="columnheader">
+                    <span class="yesno-table-radio-label yesno-table-radio-label-dont-know">{{_columnLabels.col1}}</span>
+                </div>
+                {{/if}}
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-title" role="columnheader">
+                    <span class="yesno-table-radio-label yesno-table-radio-label-no">{{_columnLabels.col2}}</span>
+                </div>
+            </div>
+            {{#each _items}}
+            <div role="row"
+                 class="yesno-table-row component-item {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}">
+                <div class="yesno-table-cell yesno-table-column-text">
+                    <div class="text-value">
+                        <div class="text-value-index">{{math @index "+" 1}}.</div>
+                        {{{a11y_text text}}}
+                    </div>
+                </div>
+                <div class="yesno-table-cell yesno-table-column-result">
+                    <div class="yesno-table-radio-button-icon-correct icon icon-tick"></div>
+                    <div class="yesno-table-radio-button-icon-incorrect icon icon-cross"></div>
+                </div>
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-button yesno-table-radio-yes column-0">
+                    <button role="radio" aria-label="{{a11y_normalize     ../_columnLabels.col0}}">
+                        <span class="yesno-table-radio-label yesno-table-radio-label-yes">{{{a11y_text ../_columnLabels.col0}}}</span>
+                        <div class="yesno-table-radio-button">
+                            <div class="yesno-table-radio-button-icon icon"></div>
+                        </div>
+                    </button>
+                </div>
+                {{#if ../_showDontKnow}}
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-button yesno-table-radio-dont-know column-1">
+                    <button role="radio" aria-label="{{a11y_normalize ../_columnLabels.col1}}">
+                        <span class="yesno-table-radio-label yesno-table-radio-label-dont-know">{{{a11y_text ../_columnLabels.col1}}}</span>
+                        <div class="yesno-table-radio-button">
+                            <div class="yesno-table-radio-button-icon icon"></div>
+                        </div>
+                    </button>
+                </div>
+                {{/if}}
+                <div class="yesno-table-cell yesno-table-column-radio yesno-table-column-radio-button yesno-table-radio-no column-2">
+                    <button role="radio" aria-label="{{a11y_normalize ../_columnLabels.col2}}">
+                        <span class="yesno-table-radio-label yesno-table-radio-label-no">{{{a11y_text ../_columnLabels.col2}}}</span>
+                        <div class="yesno-table-radio-button">
+                            <div class="yesno-table-radio-button-icon icon"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        </div>
+        <div class="buttons">
+            {{> buttons this}}
+        </div>
+    </div>
+</div>

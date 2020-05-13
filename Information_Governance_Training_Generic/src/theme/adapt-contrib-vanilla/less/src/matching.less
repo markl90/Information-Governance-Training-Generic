@@ -1,0 +1,195 @@
+.matching-component {
+  .matching-inner {
+    //padding: 4% 8% 4% 10%;
+        //background-color: @blue;
+        .mxBdrRad(@fbBorderRadius);
+
+        .matching-header {
+          //color: @white;
+          .matching-title {
+              padding-bottom: 45px;
+              /*padding-bottom: 10px;*/
+
+              //color: white;
+              border-bottom: solid 2px white;
+
+              .matching-title-inner {
+                  float: left;
+                  //width: 83.5%;
+                  padding-top: 5px;
+                  font-size: 17px;
+              }
+
+              &:before {
+                  position: absolute;
+                  content: "?";
+                  top: 32px;
+                  right: 8%;
+
+                  display: inline;
+                  width: 24px;
+                  height: 24px;
+
+                  font-size: 18px;
+                  font-weight: bold;
+                  line-height: 23px;
+
+                  text-align: center;
+
+                  color: @white;
+                  background-color: @green !important;
+
+                  .mxBdrRad(15px);
+              }
+          }
+        }
+
+        .buttons {
+            margin-top: 8px;
+        }
+
+        .buttons-inner {
+            .buttons-feedback {
+                display: none;
+            }
+
+            .button,
+            button {
+                float: right;
+                width: auto;
+                padding: 10px 22px 10px 22px;
+                line-height: 14px;
+                font-weight: bold;
+                font-size: @body-text-font-size;
+                color: @white;
+                background-color: lighten(@dark-green, 6%);
+                &:hover {
+                    color: @white;
+                    background-color: @blue;
+                }
+                &.disabled {
+                    background-color: @button-color-disabled;
+                }
+            }
+        }
+  }
+  .matching-item {
+    padding-bottom: 0;
+    padding-top: @item-padding-bottom;
+  }
+
+  .matching-item-title {
+    margin-bottom: @item-margin-top;
+  }
+
+  .matching-select-container {
+    //background-color: @item-color;
+
+    @media all and (max-width:@device-width-medium) {
+      width:100%;
+    }
+  }
+
+  .matching-select-icon {
+    color: @item-text-color;
+  }
+
+  .matching-correct-icon {
+    color: @validation-success;
+    font-size: 18px;
+  }
+
+  .matching-incorrect-icon {
+    color: @validation-error;
+    font-size: 18px;
+  }
+
+  .matching-inner{
+    .matching-header{
+      .matching-instruction{
+          margin-bottom: 0px;
+      }
+    }
+}
+
+  .matching-select {
+    padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-right;
+	.dir-rtl & {
+        padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-left;
+    }
+
+    @media all and (max-width:@device-width-medium) and (min-width:@device-width-small) {
+        width:105%;
+    }
+      
+    @media all and (max-width:(@device-width-small - 1)) {
+       width:110%;
+    }
+
+    &:focus {
+      background-color: @item-color-selected;
+    }
+  }
+
+ 	.matching-select:disabled {
+		color: @item-text-color-disabled;
+	}
+
+  .matching-widget {
+
+    &.submitted {
+      .matching-select-container {
+        background-color: @item-color-disabled;
+      }
+    }
+
+  }
+
+}
+
+.no-touch {
+  .matching-select-icon {
+    &:hover {
+      color: @item-text-color-hover;
+      &.matching-correct-icon {
+        color: @validation-success;
+      }
+      &.matching-incorrect-icon {
+        color: @validation-error;
+      }
+    }
+  }
+  .matching-select-container {
+    &:hover {
+      background-color: @item-color-hover;
+      .matching-select {
+        color: @item-text-color-hover;
+        &:disabled {
+          color: @item-text-color-disabled;
+        }
+      }
+      .matching-dropdown-icon {
+        color: @item-text-color-hover;
+      }
+    }
+  }
+}
+
+.ie8 {
+  .submitted.matching-widget .matching-select-container {
+    //background-color: @white;
+  }
+  .matching-select-container {
+    &.disabled {
+      background-color: @item-color-disabled;
+    }
+  }
+}
+
+
+//*IE FIX FOR DISABLED ITEMS
+.matching-component {
+  select[disabled]::-ms-value{
+      color: @item-text-color;
+  }
+}

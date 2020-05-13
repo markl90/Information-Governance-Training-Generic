@@ -1,0 +1,435 @@
+@column-result-width: 0px;
+@column-text-value-padding: 10px;
+@table-border-style: 1px solid @item-text-color;
+
+.disable-transition-all-colors {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: all 0 none;
+    transition: none;
+}
+
+.yesno-table-component {
+    .yesno-table-widget {
+        .yesno-table-table {
+            display: table;
+            width: 100%;
+            //background-color: @item-color;
+            border-collapse: collapse;
+
+            .yesno-table-row {
+                display: table-row;
+                .yesno-table-cell {
+                    background-color: @item-color;
+                }
+                &:nth-child(2) {
+                     .yesno-table-cell:first-child {
+                        border-top-left-radius: @compBorderRadius;
+                    }
+                    .yesno-table-cell:last-child {
+                        //border-top-right-radius: @compBorderRadius;
+                    }
+                }
+                &:first-child {
+                    .yesno-table-cell {
+                        //padding: 10px 10px 0px 10px;
+                        background-color: transparent;
+                    }
+                }
+
+                &.even, &.odd {
+                    border-bottom: @table-border-style;
+                }
+
+                &:nth-child(n+1) {
+                    border-bottom: @table-border-style;
+                }
+
+                &.last {
+                    border-bottom: inherit;
+
+                    .yesno-table-cell {
+                        //padding: 10px 10px 10px 10px;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: inherit;
+
+                    .yesno-table-cell {
+                        //padding: 10px 10px 10px 10px;
+                    }
+                    .yesno-table-cell:first-child {
+                        border-bottom-left-radius: @compBorderRadius;
+                    }
+                    .yesno-table-cell:last-child {
+                        border-bottom-right-radius: @compBorderRadius;
+                    }
+                }
+
+                &.correct {
+                    .yesno-table-column-result {
+                        .yesno-table-radio-button-icon-correct {
+                            display: block;
+                            width: 26px;
+                            height: 26px;
+                            //background-color: @white;
+                            //.mxBdrRad(15px);
+                        }
+
+                        .yesno-table-radio-button-icon-incorrect {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.incorrect {
+                    .yesno-table-column-result {
+                        .yesno-table-radio-button-icon-correct {
+                            display: none;
+                        }
+
+                        .yesno-table-radio-button-icon-incorrect {
+                            display: block;
+                            width: 26px;
+                            height: 26px;
+                            //background-color: @white;
+                            //.mxBdrRad(15px);
+                        }
+                    }
+                }
+
+                &.disabled {
+                    .yesno-table-column-radio {
+                        cursor: default;
+                        //background-color: @item-disabled-color;
+
+                        &:hover {
+                            //background-color: @item-disabled-color;
+                        }
+
+                        button {
+                            cursor: default;
+
+                            &:hover {
+                                //background-color: @item-disabled-color;
+                            }
+                        }
+
+                        &.selected {
+                            //background-color: @item-hover-color;
+
+                            button {
+
+                                &:hover {
+                                    //background-color: @item-hover-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .yesno-table-row-title {
+            line-height: 35px;
+        }
+
+        .yesno-table-cell {
+            display: table-cell;
+            //padding: 10px 10px 0px 10px;
+        }
+
+        .yesno-table-column-text {
+            color: white;
+
+            .text-value {
+                padding: @column-text-value-padding;
+                padding-left: @column-text-value-padding + @column-text-value-padding + 12px;
+                //font-weight: bold;
+                position: relative;
+                .text-value-index {
+                    position: absolute;
+                    padding-top: 10px;
+                    left: 12px;
+                    top: 0px;
+                }
+            }
+        }
+
+        .yesno-table-column-radio {
+            width: 75px;
+            text-align: center;
+            vertical-align: middle;
+            border-left: @table-border-style;
+            cursor: pointer;
+            .disable-transition-all-colors;
+
+            &:hover {
+                //background-color: @item-hover-color;
+            }
+
+            button {
+                //width: 100%;
+                background-color: transparent;
+                padding-left: 5px;
+                padding-right: 5px;
+                .disable-transition-all-colors;
+
+                &:hover {
+                    //background-color: @item-hover-color;
+                }
+            }
+
+            .dir-rtl & {
+                border-left: none;
+                border-right: @table-border-style;
+            }
+
+            &.selected {
+                //background-color: @item-hover-color;
+
+                .yesno-table-radio-button-icon {
+                    &:before {
+                        content: "\e65d";
+                    }
+                }
+            }
+        }
+
+        .yesno-table-column-result {
+            width: @column-result-width;
+            text-align: center;
+            vertical-align: middle;
+
+            .icon {
+                width: initial;
+                font-size:18px;
+                line-height: 26px;
+            }
+        }
+
+        .yesno-table-column-radio-title {
+            cursor: default;
+
+            &:hover {
+                //background-color: inherit;
+            }
+
+            .yesno-table-radio-label {
+                display: block;
+            }
+        }
+
+        .yesno-table-column-radio-title:nth-child(3) {
+            .yesno-table-radio-label {
+                border-top-left-radius: @compBorderRadius;
+                padding-left: 3px;
+                padding-right: 3px;
+
+            }
+        }
+
+        .yesno-table-column-radio-title:nth-child(4) {
+            .yesno-table-radio-label {
+                border-top-right-radius: @compBorderRadius;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+        }
+
+        .yesno-table-radio-label {
+            font-weight: bold;
+            display: none;
+            
+            font-size: 17px;
+        }
+
+        .yesno-table-radio-label-yes {
+        }
+
+        .yesno-table-radio-label-dont-know {
+        }
+
+        .yesno-table-radio-label-no {
+        }
+
+        .yesno-table-radio-button-icon {
+            //position: absolute;
+            color: @item-text-color;
+            display: inline-block;
+            width: 26px; //2px bigger than icon to avoid crop
+            &:before {
+                content: "\e65e";
+            }
+        }
+
+        .yesno-table-radio-button-icon-correct {
+            color: @icon-correct-color;
+            display: none;
+        }
+
+        .yesno-table-radio-button-icon-incorrect {
+            color: @icon-incorrect-color;
+            display: none;
+        }
+    }
+    .buttons {
+        margin-top: 8px;
+    }
+    .buttons-action {
+        float: right;
+        width: auto;
+        padding: 10px 22px 10px 22px;
+        line-height: 14px;
+        font-weight: bold;
+        font-size: @body-text-font-size;
+        color: @white;
+        background-color: lighten(@dark-green, 6%);
+        &:hover {
+            color: @white;
+            background-color: @blue;
+        }
+        &.disabled {
+            background-color: @button-color-disabled;
+        }
+    }
+}
+
+.size-small {
+    .yesno-table-component {
+        .yesno-table-widget {
+            .yesno-table-table {
+
+                .yesno-table-row {
+                    display: inline-block;
+                    position: relative;
+                    &:nth-child(2) {
+                        .yesno-table-cell:first-child {
+                            border-top-left-radius: @compBorderRadius;
+                            border-top-right-radius: @compBorderRadius;
+                        }
+                        .yesno-table-cell:last-child {
+                            //border-top-right-radius: 0px;
+                        }
+                    }
+
+                    &:last-child {
+                        .yesno-table-cell:first-child {
+                            border-bottom-left-radius: 0px;
+                        }
+                        .yesno-table-cell:nth-child(3) {
+                            border-bottom-left-radius: @compBorderRadius;
+                        }
+                    }
+
+
+                }
+
+                .yesno-table-row.yesno-table-row-title {
+                    display: none;
+                }
+            }
+
+            .yesno-table-radio-label {
+                display: block;
+                margin-bottom: 6px;
+                color: @white;
+            }
+
+            .yesno-table-column-text {
+                display: inline-block;
+                width: 100%;
+                border-bottom: @table-border-style;
+
+                .text-value {
+                    padding: @column-text-value-padding;
+                    padding-right: @column-result-width;
+                    padding-left: @column-text-value-padding + @column-text-value-padding + 12px;
+
+                    .dir-rtl& {
+                        padding-right: @column-text-value-padding;
+                        padding-right: @column-text-value-padding + @column-text-value-padding + 12px;
+                        padding-left: @column-result-width;
+                    }
+                }
+            }
+
+            .yesno-table-column-result {
+                display: block;
+                position: absolute;
+                top: @column-text-value-padding;
+                right: 30px;
+
+                .dir-rtl& {
+                    left: 0;
+                    right: auto;
+                }
+            }
+
+            .yesno-table-column-radio {
+                width: 25%;
+                display: block;
+                float: left;
+                border: none;
+
+                .dir-rtl& {
+                    float: right;
+                }
+            }
+
+            .yesno-table-radio-no {
+                border-left: @table-border-style;
+
+                .dir-rtl& {
+                    border-left: none;
+                    border-right: @table-border-style;
+                }
+            }
+
+            .yesno-table-radio-dont-know {
+                border-left: @table-border-style;
+
+                .dir-rtl& {
+                    border-left: none;
+                    border-right: @table-border-style;
+                }
+            }
+
+            &.two-column-table {
+                .yesno-table-column-radio {
+                    width: 49.8%; //when border used we have to make it bit smaller (50%)
+                }
+            }
+
+            .yesno-table-radio-dont-know {
+                width: 49.0%; //when border used we have to make it bit smaller (50%)
+            }
+        }
+    }
+}
+
+.no-marking {
+    //in assessment when the show marking is false
+    .yesno-table-component {
+        .yesno-table-widget {
+            .yesno-table-radio-button-icon-correct {
+                display: none !important;
+            }
+
+            .yesno-table-radio-button-icon-incorrect {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+.yesno-table-column-radio {
+    .button[disabled="disabled"],
+    button[disabled="disabled"] {
+        background-color: transparent !important;
+    }
+}

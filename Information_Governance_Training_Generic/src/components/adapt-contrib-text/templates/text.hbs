@@ -1,0 +1,12 @@
+<div class="text-inner component-inner" role="region" aria-label="{{_globals._components._text.ariaRegion}}">
+    {{> component this}}
+	{{#if _nextButton}}
+	<div class="buttons">
+		<div class="buttons-inner">
+		    <div class="buttons-cluster clearfix">
+		        <button class="buttons-action" aria-label="{{_nextButton.text}}">{{{_nextButton.text}}}</button>
+		    </div>
+		</div>
+	</div>
+    {{/if}}
+</div>

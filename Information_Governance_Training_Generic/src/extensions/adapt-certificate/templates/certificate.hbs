@@ -1,0 +1,39 @@
+{{!-- Wrapped with div class="certificate" --}}
+<div class="certificate-outer-wrapper"
+     role="region" 
+     aria-label="{{popup}}"
+     tabindex="0">
+    <div class="certificate-inner">
+        <div class="bg-image">
+            <img src="assets/cerficate-interface.jpg">
+        </div>
+        <div class="certificate-wrapper">
+            <div id="box_headingtext1" role="region" tabindex="0">{{{headingText}}}</div>
+            <div id="box_text" role="region" tabindex="0">{{{boxText}}}</div>
+            <div id="userName" role="region" tabindex="0">{{{userName}}}{{!-- <br/>{{{labelUserId}}}{{{userId}}} --}}</div>
+            <img src="assets/certificate-line.png">
+            <div id="box_text1" role="region" tabindex="0">{{boxTextContinued}}</div>
+            <div id="box_headingtext2" role="region" tabindex="0">{{courseTitle}}{{#if isStandalone}} - {{{_courseTitle_type.standalone}}}{{!-- {{else}} - {{{_courseTitle_type.online}}} --}}{{/if}}{{#if courseTitle_lang}}{{{courseTitle_lang}}}{{/if}}</div>
+            {{!--
+                use labelScore and score and/or maxScore when assessment is required for completion
+                use scoreAsPercent when isPercentageBased is true
+            --}}
+            <div id="box_text2" role="region" tabindex="0">{{{labelScore}}}{{#if isPercentageBased}}{{scoreAsPercent}}%{{else}}{{score}}/{{maxScore}}{{/if}}<br>{{date}}.</div>
+            {{#if extraText}}<div id="box_headingtext4" role="region" tabindex="0">{{{extraText}}}</div>{{/if}}
+            <div id="print"></div>
+        </div>
+
+        <div class="print-btn-row">
+            <div class="button-wrapper">
+                <a href="#" class="button print-btn clearfix" 
+                   role="button" 
+                   aria-label="{{ariaLabelPrintButton}}"><span>{{{labelPrintButton}}}</span></a>
+                <a href="#" class="button close-btn clearfix" 
+                   role="button" 
+                   aria-label="{{ariaLabelCloseButton}}"><span>{{{labelCloseButton}}}</span></a>
+            </div>    
+        </div>
+        <div class="watermark">{{{watermark}}}</div>
+    </div>
+</div>
+<div class="certificate-shadow"></div>

@@ -1,0 +1,264 @@
+.simplecasestudy-component {
+    .simplecasestudy-item {
+        .simplecasestudy-item-inner {
+            width: 100%;
+            max-width: 100%;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            .mxBdrRad(@compBorderRadius);
+            .simplecasestudy-item-title {
+                
+                background-color: #009EDF;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                display: table;
+                width: 100%;
+                height: 90px;
+                clear: both;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                display: inline-block;
+
+                .simplecasestudy-item-title-inner {
+                    height: 100%;
+                    color: #ffffff;
+                    margin-left: 160px;
+
+                    div {
+                        width: 100%;
+                        height: 100%;
+                        display: table;
+                    }
+                }
+                /*&.visited {
+            background-color: white !important;
+            color:#149FB0;
+            border:solid 4px #149FB0;
+            font-weight:bold;
+        }*/
+
+                &.simplecasestudy-anchor-0 {
+                    border: solid 0px #e768a4;
+                }
+
+                &.simplecasestudy-anchor-1 {
+                    border: solid 0px #f9a72e;
+                }
+
+                &.simplecasestudy-anchor-2 {
+                    border: solid 0px #149eaf;
+                }
+
+                &.simplecasestudy-anchor-3 {
+                    border: solid 0px #a8bc1e;
+                }
+
+                &.simplecasestudy-anchor-4 {
+                    border: solid 0px #054a76;
+                }
+
+                &.visited {
+                    &.visited-icon {
+                        &:after {
+                           position: absolute;
+                            bottom: 7px;
+                            right: 7px;
+                            font-size: 18px;
+                            font-weight: @font-weight-light;
+                            color: @white;
+                            content: "\e633";
+                            font-family: vanilla;
+                        }
+                    }
+                    
+                    &.simplecasestudy-anchor-0 {
+                        background-color: @yellow;
+                        border: solid 0px @yellow;
+                    }
+
+                    &.simplecasestudy-anchor-1 {
+                        background-color: @yellow;
+                        border: solid 0px @yellow;
+                    }
+
+                    &.simplecasestudy-anchor-2 {
+                        background-color: #149eaf;
+                        border: solid 0px #149eaf;
+                    }
+
+                    &.simplecasestudy-anchor-3 {
+                        background-color: #a8bc1e;                      
+                        border: solid 0px #a8bc1e;
+                    }
+
+                    &.simplecasestudy-anchor-4 {
+                        background-color: #054a76;
+                        border: solid 0px #054a76;
+                    }
+                }
+
+                &.selected {
+                    background-color:  @yellow !important;
+
+                    &.simplecasestudy-anchor-0 {
+                        border: solid 0px #e768a4 !important;
+                        color: @white !important;
+                    }
+
+                    &.simplecasestudy-anchor-1 {
+                        border: solid 0px #f9a72e !important;
+                        color: @white !important;
+                    }
+
+                    &.simplecasestudy-anchor-2 {
+                        border: solid 0px #149eaf !important;
+                        color: #149eaf !important;
+                    }
+
+                    &.simplecasestudy-anchor-3 {
+                        border: solid 0px #a8bc1e !important;
+                        color: #a8bc1e !important;
+                    }
+
+                    &.simplecasestudy-anchor-4 {
+                        border: solid 0px #054a76 !important;
+                        color: #054a76 !important;
+                    }
+                }
+
+                .no-touch & {
+                    &:hover {
+                        /*color: @item-text-color-hover;
+                    background-color: @item-color-hover;
+                    border-color: @item-border-color-hover;
+
+                    .accordion-item-title-icon {
+                        color: @item-text-color-hover;
+                    }*/
+                        //background-color: @white !important;
+
+                        &.simplecasestudy-anchor-0 {
+                            border: solid 0px #e768a4 !important;
+                            color: @white !important;
+                        }
+
+                        &.simplecasestudy-anchor-1 {
+                            border: solid 0px #f9a72e !important;
+                            color: @white !important;
+                        }
+
+                        &.simplecasestudy-anchor-2 {
+                            border: solid 0px #149eaf !important;
+                            color: #149eaf !important;
+                        }
+
+                        &.simplecasestudy-anchor-3 {
+                            border: solid 0px #a8bc1e !important;
+                            color: #a8bc1e !important;
+                        }
+
+                        &.simplecasestudy-anchor-4 {
+                            border: solid 0px #054a76 !important;
+                            color: #054a76 !important;
+                        }
+                    }
+
+                    &.visited:hover {
+                        /*color: @item-text-color-hover;*/
+                        color: black;
+                        background-color: @item-color-hover;
+                        border-color: @item-border-color-hover;
+
+                        .accordion-item-title-icon {
+                            color: @item-text-color-hover;
+                        }
+                    }
+
+                    &.selected:hover {
+                        background-color: @item-color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .simplecasestudy-color-case {
+        /*min-width: 300px;*/
+        width: 100%;
+        height: 65px;
+        .mxBdrRad(@compBorderRadius);
+        clear: both;
+    }
+
+    .simplecasestudy-color-case-parent {
+        clear: both;
+    }
+
+    .simplecasestudy-inner {
+        background-color: @white;
+    }
+
+    .simplecasestudy-body {
+        width: 100%;
+        /*.simplecasestudy-body-inner {
+            padding-bottom: 20px;
+        }*/
+    }
+
+    .simplecasestudy-popup {
+        width: 65%;
+        float: right;
+        
+        .simplecasestudy-popup-inner {
+            padding: 0px;
+            margin: 0 0 0 26px;
+        }
+
+        .simplecasestudy-popup-item {
+            .simplecasestudy-popup-title {
+                color: @white;
+                font-size: 17px;
+                margin-bottom: 16px;
+                line-height: 9px;
+            }
+
+            .simplecasestudy-popup-content {
+                padding: 20px 25px 60px 20px;
+            }
+
+            .simplecasestudy-popup-item-image-inner-default {
+                display: inline-block;
+                width: 100%;
+            }
+
+            .simplecasestudy-image-inner-alignment {
+                width: 100%;
+                height: auto;
+            }
+
+            .simplecasestudy-image-button-inner-alignment {
+                float: right;
+                width: auto;
+                padding: 10px 22px 10px 22px;
+                line-height: 14px;
+                font-weight: bold;
+                font-size: @body-text-font-size;
+                color: @white;
+                background-color: lighten(@dark-green, 6%);
+                &:hover {
+                    color: @white;
+                    background-color: @blue;
+                }
+                &.disabled {
+                    background-color: @button-color-disabled;
+                }
+                &:before {
+                    //font-family: dinpro;
+                    content: "Rules";
+                }
+            }
+        }
+    }
+}

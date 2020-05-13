@@ -1,0 +1,77 @@
+.text-component {
+    .text-inner {
+        .buttons {
+            margin-top: 26px;
+            margin-bottom: 10px;
+        }
+
+        .buttons-inner {
+            padding-right: 25%;
+            .buttons-feedback {
+                display: none;
+            }
+
+            .button,
+            button {
+                float: left;
+                width: auto;
+                padding: 9px 30px 9px 12px;
+                /*font-family: dinpro;*/
+                line-height: 16px;
+                font-size: 14px;
+                font-weight: normal;
+
+                color: @white;
+                background-color: @green;
+                -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.2);
+                -moz-box-shadow: 0 2px 1px rgba(0,0,0,.2);
+                box-shadow: 0 2px 1px rgba(0,0,0,.2);
+                &:hover {
+                    color: @white;
+                    background-color: @pink;
+                }
+                &.disabled {
+                    background-color: @button-color-disabled;
+                }
+            }
+            //custom added
+            .button:after,
+            button:after {
+                font-family: vanilla;
+                font-size: 20px;
+                font-weight: bolder;
+
+                content: "\e655";
+                position: absolute;
+                padding: 0 20px 0px 4px;
+                margin: 0;
+            }
+        }
+    }
+    &.default{
+        .good-feedback {
+            display: none;
+        }
+        .intermediate-feedback {
+            display: none;
+        }
+        .poor-feedback {
+            display: none;
+        }
+    }
+    &.good{
+        .good-feedback {
+            display: block;
+        }
+    }
+    &.intermediate{
+        .intermediate-feedback {
+            display: block;
+        }
+    }
+    &.poor{
+        .poor-feedback {
+            display: block;
+        }
+    }
+}

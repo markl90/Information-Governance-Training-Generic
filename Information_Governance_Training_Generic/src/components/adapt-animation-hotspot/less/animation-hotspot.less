@@ -1,0 +1,75 @@
+.animation-hotspot-component {
+    .animation-hotspot-title {
+        margin: 0px;
+    }
+    .animation-hotspot-widget {
+        margin: 20px 0px 0px 0px;
+        .animation-hotspot-widget-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .animation-hotspot-item-holder {
+                width: 100%;
+                height: 100%;
+                //position: absolute;
+                //top: 0px;
+                //left: 0px;
+                img {
+                    vertical-align: top;
+                    border: 2px solid @white;
+                    -webkit-transition: border 0.5s ease-in-out;
+                    -ms-transition:     border 0.5s ease-in-out;
+                    transition:         border 0.5s ease-in-out;
+                }
+                .blink {
+                    border: 2px solid @red;
+                }
+                .noblink {
+                    border-color: @white !important;
+                }
+                .animation-hotspot-item {
+                    //position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    //top: 0;
+                    //left: 0;
+                    z-index: 0;
+                    img {
+                        background: none;
+                        opacity: 0;
+                        display: inline-block;
+                        clear: both;
+                        //top: 0;
+                        //left: 0;
+                        //position: absolute;
+                        cursor: pointer;
+                        //margin: 8px 8px 0px 0px;
+                    }
+                    a {
+                        margin: 8px 8px 0px 0px;
+                    }
+                }
+                .animation-hotspot-highlight {
+                    z-index: 1;
+                    img {
+                        display: none;
+                        position: absolute;
+                    }
+                }
+                .animation-hotspot-hotspot {
+                    z-index: 2;
+                    .hotspot {
+                        position: absolute;
+                        border-radius: 0px;
+                        width: 20%;
+                        background: rgba(255,0,0,0.4);
+                        z-index: 1;
+                        cursor: pointer;
+                        text-align: center;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

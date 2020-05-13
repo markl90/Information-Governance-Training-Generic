@@ -1,0 +1,242 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type":"object"
+        },
+        "contentobject": {
+          "type":"object"
+        },
+        "article": {
+          "type":"object",
+          "properties":{
+            "_navLink": {
+              "type":"object",
+              "required":false,
+              "legend": "Nav Link",
+              "properties": {
+                "_isEnabled": {
+                  "type":"boolean",
+                  "required":true,
+                  "default": false,
+                  "title": "Is Enabled",
+                  "inputType": { "type": "Boolean", "options": [false, true]},
+                  "validators": [],
+                  "help": "Turns Nav Link on and off."
+                },
+                "_classes": {
+                  "type": "string",
+                  "required": true,
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_items": {
+                  "type":"array",
+                  "required":true,
+                  "title": "Items",
+                  "items": {
+                    "type":"object",
+                    "required":true,
+                    "properties":{
+                      "_hideAfterClick": {
+                        "type":"boolean",
+                        "required":true,
+                        "default": false,
+                        "title": "Hide button after clicking",
+                        "inputType": { "type": "Boolean", "options": [false, true]},
+                        "validators": []
+                      },
+                      "text": {
+                        "type":"string",
+                        "required":true,
+                        "default": "",
+                        "title": "Button Text",
+                        "inputType": "Text",
+                        "validators": ["required"],
+                        "translatable": true
+                      },
+                      "link": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Link ID",
+                        "inputType": "Text",
+                        "validators": [],
+                        "help": "Paste the ID of the element you want to link to"
+                      },
+                      "_ariaLabel": {
+                        "type":"string",
+                        "required":false,
+                        "default": "",
+                        "title": "Aria Label",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type":"object",
+          "properties":{
+            "_navLink": {
+              "type":"object",
+              "required":false,
+              "legend": "Nav Link",
+              "properties": {
+                "_isEnabled": {
+                  "type":"boolean",
+                  "required":true,
+                  "default": false,
+                  "title": "Is Enabled",
+                  "inputType": { "type": "Boolean", "options": [false, true]},
+                  "validators": [],
+                  "help": "Turns Nav Link on and off."
+                },
+                "_classes": {
+                  "type": "string",
+                  "required": true,
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_items": {
+                  "type":"array",
+                  "required":true,
+                  "title": "Items",
+                  "items": {
+                    "type":"object",
+                    "required":true,
+                    "properties":{
+                      "_hideAfterClick": {
+                        "type":"boolean",
+                        "required":true,
+                        "default": false,
+                        "title": "Hide button after clicking",
+                        "inputType": { "type": "Boolean", "options": [false, true]},
+                        "validators": []
+                      },
+                      "text": {
+                        "type":"string",
+                        "required":true,
+                        "default": "",
+                        "title": "Nav Link Text",
+                        "inputType": "Text",
+                        "validators": ["required"],
+                        "translatable": true
+                      },
+                      "link": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Link ID",
+                        "inputType": "Text",
+                        "validators": [],
+                        "help": "Paste the ID of the element you want to link to"
+                      },
+                      "_ariaLabel": {
+                        "type":"string",
+                        "required":false,
+                        "default": "",
+                        "title": "Aria Label",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type":"object",
+          "properties":{
+            "_navLink": {
+              "type":"object",
+              "required":false,
+              "legend": "Nav Link",
+              "properties": {
+                "_isEnabled": {
+                  "type":"boolean",
+                  "required":true,
+                  "default": false,
+                  "title": "Is Enabled",
+                  "inputType": { "type": "Boolean", "options": [false, true]},
+                  "validators": [],
+                  "help": "Turns Nav Link on and off."
+                },
+                "_classes": {
+                  "type": "string",
+                  "required": true,
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_items": {
+                  "type":"array",
+                  "required":true,
+                  "title": "Items",
+                  "items": {
+                    "type":"object",
+                    "required":true,
+                    "properties":{
+                      "_hideAfterClick": {
+                        "type":"boolean",
+                        "required":true,
+                        "default": false,
+                        "title": "Hide button after clicking",
+                        "inputType": { "type": "Boolean", "options": [false, true]},
+                        "validators": []
+                      },
+                      "text": {
+                        "type":"string",
+                        "required":true,
+                        "default": "",
+                        "title": "Nav Link Text",
+                        "inputType": "Text",
+                        "validators": ["required"],
+                        "translatable": true
+                      },
+                      "link": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Link ID",
+                        "inputType": "Text",
+                        "validators": [],
+                        "help": "Paste the ID of the element you want to link to"
+                      },
+                      "_ariaLabel": {
+                        "type":"string",
+                        "required":false,
+                        "default": "",
+                        "title": "Aria Label",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

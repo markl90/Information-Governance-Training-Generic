@@ -1,0 +1,140 @@
+@simplecasestudy-item-spacing:5px;
+
+.simplecasestudy-component {
+    // .simplecasestudy-item-inner {
+    //     width: 100%;
+    //     max-width: 100%;
+    //     overflow: hidden;
+
+        .simplecasestudy-header {
+            //width: 100%;
+
+            .simplecasestudy-header-inner {
+                .simplecasestudy-instruction {
+                    width: 35%;
+                }
+            }
+        }
+
+        .simplecasestudy-widget {
+            overflow: auto;
+            .simplecasestudy-item {
+                float: left;
+                .simplecasestudy-item-inner {
+                    width: 100%;
+                    max-width: 100%;
+                    overflow: hidden;
+
+                    .simplecasestudy-item-inner img {
+                        width: 100%;
+                        
+                        @media all and (max-width:776px) {
+                            width: 100%;
+                        }
+                        @media all and (max-width:760px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .simplecasestudy-item-title {
+                        position: relative;
+                        
+                        // display: block;
+                        float: left;
+                
+                        text-decoration: none;
+                
+                        color: @item-text-color;
+                
+                        &.visited {
+                            color: @item-text-visited-color;
+                        }
+                
+                        &.selected {
+                            color: @item-text-visited-color;
+                            background-color: @yellow !important;
+                        }
+
+                        .simplecasestudy-item-image-inner-default {
+                            display: block;
+                            .image-inner-alignment {
+                                float: left;
+                            }
+                        }
+                    
+                        .simplecasestudy-item-image-inner-visited {
+                            display: none;
+                        }
+                        
+                        .simplecasestudy-item-title-inner {
+                            //padding: @item-padding;
+                            
+                            h5 {
+                                padding: 18px;
+                                display: table-cell;
+                                vertical-align: middle;
+                                font-size: @item-title-font-size;
+                            }
+                        }
+
+                        .simplecasestudy-item-title-image {
+                            width: 160px;
+                            float: left;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0px !important;
+                    }
+                }
+                
+            }
+        }
+    //}
+
+    .simplecasestudy-popup {
+        display: none;
+        float: left;
+        width: 35%;
+
+        color: @inverted-foreground-color;
+        /*background: @inverted-background-color;*/
+        
+        .dir-rtl & {
+            float: right;
+        }
+    }
+    .simplecasestudy-popup-inner {
+        padding: 20px;
+        background-color: @yellow;
+        .mxBdrRad(@compBorderRadius);
+        overflow: hidden;
+    }
+    &.mobile {
+        .simplecasestudy-popup {
+            display: none;
+        }
+    }
+    &.desktop {
+        .simplecasestudy-hidden-popup {
+            float: left;
+            width: 60%;
+            margin-right: 3%;
+        }
+    }
+    .simplecasestudy-hidden {
+        display: none;
+    }
+}
+
+.no-touch {
+    .simplecasestudy-component {
+        .simplecasestudy-item-title {
+            &:hover {
+                color: @white;
+            }
+            &.visited:hover {
+                color: @white;
+            }
+        }
+    }
+}
